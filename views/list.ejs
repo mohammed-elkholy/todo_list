@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+
+<div class="box" id="heading">
+  <h1><%= lable %></h1>
+</div>
+
+<div class="box">
+  <%  for (const element of new_item) { %>
+    <div class="item">
+    <input type="checkbox">
+  <p><%= element %></p>
+</div>
+<% }; %>
+<form class="item" action="/" method="post">
+  <input type="text" name="new_todo" placeholder="New Item" autocomplete="off">
+  <button type="submit" name="save" value=<%= lable %> >+</button>
+</form>
+
+</div>
+
+<%- include("partials/footer") -%>
